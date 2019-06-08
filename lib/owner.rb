@@ -58,17 +58,15 @@ class Owner
 
   def sell_pets 
     self.pets.each do |specie, pet_array|
-      species_key.each do |pet|
-        pet.mood = "nervous"
-      end
+      pet_array.each {|pet| pet.mood = "nervous"}
     end
     self.pets = {fishes: [], cats: [], dogs: []}
   end
 
   def list_pets 
-    self.pets.each do |species_key|
-      puts "#{species_key}:"
-      species_key.each do |pet|
+    self.pets.each do |specie, pet_array|
+      puts "#{specie}:"
+      pet_array.each do |pet|
         puts pet.name
       end
     end
