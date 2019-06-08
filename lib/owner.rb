@@ -40,7 +40,7 @@ class Owner
 
   def walk_dogs
     self.pets.each do |specie, pet_array|
-      pet_array.each {|dog| dog.mood = "happy"} if specie == "dogs"
+      pet_array.each {|dog| dog.mood = "happy"} if specie == :dogs
     end
   end
 
