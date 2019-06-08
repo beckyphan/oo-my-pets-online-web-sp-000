@@ -39,8 +39,8 @@ class Owner
   end
 
   def walk_dogs
-    self.pets[dogs].each do |dog|
-      dog.mood = "happy"
+    self.pets.each do |specie|
+      [dogs].each {|dog| dog.mood = "happy"} if specie == dogs
     end
   end
 
