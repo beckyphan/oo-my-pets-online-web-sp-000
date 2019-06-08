@@ -64,7 +64,7 @@ class Owner
   end
 
   def list_pets 
-    self.pets.each |species_key|
+    self.pets.each do |species_key|
       puts "#{species_key}:"
       species_key.each do |pet|
         puts pet.name
