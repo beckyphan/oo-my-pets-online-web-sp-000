@@ -7,14 +7,11 @@ class Owner
   def initialize(species)
     @species = species
     @@all << self
+    @pets = {fishes: [], cats: [], dogs: []}
   end
   
   def say_species
     "I am a #{@species}."
-  end
-
-  def pets 
-    @pets = {fishes: [], cats: [], dogs: []}
   end
 
   def self.all 
@@ -30,8 +27,7 @@ class Owner
   end 
 
   def buy_fish(name)
-    fish_hash = self.pets
-    fish_hash[:fishes] << [Fish.new(name)]
+    self.pets[:fishes] << [Fish.new(name)]
   end
 
   def buy_cat(name)
