@@ -29,7 +29,7 @@ class Owner
     @@all = [] 
   end 
 
-  def buy_fish
+  def buy_fish(name)
     self.pets << {fishes: [Fish.new(name)]}
   end
 
