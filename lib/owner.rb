@@ -29,7 +29,7 @@ class Owner
     @@all = [] 
   end 
 
-  def buy_fish(name)
+  def buy_fish
     self.pets :fishes => Fish.new(name)
   end
 
