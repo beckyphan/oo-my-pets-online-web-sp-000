@@ -30,7 +30,7 @@ class Owner
   end 
 
   def buy_fish
-    self.pets << {fishes: [Fish.new()]}
+    self.pets << {fishes: [Fish.new(name)]}
   end
 
   def buy_cat(name)
