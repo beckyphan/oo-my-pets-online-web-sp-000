@@ -66,7 +66,7 @@ class Owner
   def list_pets 
     nfish = self.pets.values_at(:fishes).flatten.count
     ndogs = self.pets.values_at(:dogs).flatten.size
-    ncats = self.pets.values_at(:cats).flatten.size
+    ncats = self.pets.values_at(:cats).flatten.length
     "I have #{nfish} fish, #{ndogs} dog(s), and #{ncats} cat(s)."
   end
 end
