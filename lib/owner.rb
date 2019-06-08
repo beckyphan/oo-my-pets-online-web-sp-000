@@ -65,10 +65,7 @@ class Owner
 
   def list_pets 
     self.pets.each do |specie, pet_array|
-      puts "#{specie}:"
-      pet_array.each do |pet|
-        puts pet.name
-      end
+      num_fish = pet_array.count if specie == :fishes
     end
   end
 end
