@@ -30,7 +30,8 @@ class Owner
   end 
 
   def buy_fish(name)
-    self.pets = {fishes: [Fish.new(name)]}
+    fish_hash = self.pets
+    fish_hash[:fishes] << [Fish.new(name)]
   end
 
   def buy_cat(name)
