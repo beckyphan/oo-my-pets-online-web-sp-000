@@ -40,19 +40,19 @@ class Owner
 
   def walk_dogs
     self.pets.each do |specie, pet_array|
-      pet_array.each {|dog| dog.mood = "happy"} if specie == :dogs
+      pet_array.each {|pet| pet.mood = "happy"} if specie == :dogs
     end
   end
 
   def play_with_cats
-    self.pets[cats].each do |cat|
-      cat.mood = "happy"
+    self.pets.each do |specie, pet_array|
+      pet_array.each {|pet| pet.mood = "happy"} if specie == :cats
     end
   end
 
  def feed_fish
-    self.pets[fishes].each do |fish|
-      fish.mood = "happy"
+    self.pets.each do |specie, pet_array|
+      pet_array.each {|pet| pet.mood = "happy"} if specie == :fishes
     end
   end
 
