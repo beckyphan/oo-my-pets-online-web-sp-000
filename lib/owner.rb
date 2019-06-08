@@ -66,6 +66,9 @@ class Owner
   def list_pets 
     self.pets.each do |specie, pet_array|
       num_fish = pet_array.count if specie == :fishes
+      num_cats = pet_array.count if specie == :cats 
+      num_dogs = pet_array.count if specie == :dogs
     end
+    "I have #{num_fish} fish, #{num_dog} dog(s), and #{num_cats} cat(s)."
   end
 end
