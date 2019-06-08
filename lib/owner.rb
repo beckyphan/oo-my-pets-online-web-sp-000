@@ -65,8 +65,8 @@ class Owner
 
   def list_pets 
     nfish = self.pets.values_at(:fishes).count
-    ndogs = self.pets.count([:fishes])
-    ncats = self.pets.count([:fishes])
+    ndogs = self.pets.values_at(:dogs).count
+    ncats = self.pets.values_at(:cats).count
     "I have #{nfish} fish, #{ndogs} dog(s), and #{ncats} cat(s)."
   end
 end
